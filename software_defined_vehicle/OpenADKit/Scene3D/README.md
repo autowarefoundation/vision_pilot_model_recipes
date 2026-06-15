@@ -1,0 +1,26 @@
+# Scene3D - Open AD Kit Demo
+
+Containerized Scene3D Demo, monocular depth estimation.
+
+## Prerequisites
+
+- Download the [Scene3D PyTorch model weights](https://github.com/autowarefoundation/autoware.privately-owned-vehicles/tree/main/Models#scene3d---monocular-depth-estimation) and place it in the `model-weights` directory with the name `scene3d.pth` (or run `../download-assets.sh` to fetch all demo assets at once).
+
+    ```bash
+    mkdir -p model-weights
+    curl -fL "https://drive.usercontent.google.com/download?id=1MrKhfEkR0fVJt-SdZEc0QwjwVDumPf7B&confirm=xxx" -o model-weights/scene3d.pth
+    ```
+
+## Usage
+
+```bash
+./launch-scene3d.sh
+```
+
+## Output
+
+After the container is running, you can access the visualization by opening the following URL in your browser:
+
+<http://127.0.0.1:6080/vnc.html?resize=scale&autoconnect=true&password=visualizer>
+
+The output shows monocular depth estimation of the input video in real-time.
